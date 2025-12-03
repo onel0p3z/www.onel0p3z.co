@@ -7,8 +7,7 @@
     "url": "https://github.com/onel0p3z/www.onel0p3z.co/issues"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.8",
-    "gulp": "^3.9.1"
+    "vite": "^5.2.0"
   },
   "homepage": "https://github.com/onel0p3z/www.onel0p3z.co#readme",
   "keywords": [
@@ -23,6 +22,8 @@
     "url": "git+https://github.com/onel0p3z/www.onel0p3z.co.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   }
 }
