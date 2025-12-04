@@ -35,6 +35,7 @@
         "preview": "vite preview",
         "lint": "eslint .",
         "lint:css": "stylelint \"**/*.css\"",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "check": "npm run lint && npm run lint:css && npm run format"
     }
 }

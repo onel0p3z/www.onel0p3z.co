@@ -9,6 +9,11 @@
     --glass-blur: 20px;
     --glass-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
     --transition-speed: 0.3s;
+    --social-bg-default: rgb(255 255 255 / 5%);
+    --social-border-default: rgb(255 255 255 / 5%);
+    --social-bg-hover: rgb(255 255 255 / 15%);
+    --social-border-hover: rgb(255 255 255 / 20%);
+    --tooltip-bg: rgb(0 0 0 / 80%);
 }
 
 /* Reset & Base */
@@ -128,41 +133,6 @@ h1 {
     transform-origin: bottom left;
 }
 
-/* Social Links */
-.social-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.social-links li {
-    display: flex;
-}
-
-.social-links a {
-    color: var(--color-text-muted);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background: rgb(255 255 255 / 5%);
-    border: 1px solid rgb(255 255 255 / 5%);
-    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-}
-
-.social-links a:hover {
-    color: var(--color-text);
-    background: rgb(255 255 255 / 15%);
-    border-color: rgb(255 255 255 / 20%);
-    transform: translateY(-4px) scale(1.1);
-    box-shadow: 0 10px 20px -10px rgb(0 0 0 / 50%);
-}
-
 .icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -174,7 +144,7 @@ h1 {
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
-    background: rgb(0 0 0 / 80%);
+    background: var(--tooltip-bg);
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -185,9 +155,44 @@ h1 {
     white-space: nowrap;
 }
 
-.social-links a:hover .tooltip {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
+/* Social Links */
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    li {
+        display: flex;
+    }
+
+    a {
+        color: var(--color-text-muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background: var(--social-bg-default);
+        border: 1px solid var(--social-border-default);
+        transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+
+        &:hover {
+            color: var(--color-text);
+            background: var(--social-bg-hover);
+            border-color: var(--social-border-hover);
+            transform: translateY(-4px) scale(1.1);
+            box-shadow: 0 10px 20px -10px rgb(0 0 0 / 50%);
+
+            .tooltip {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+    }
 }
 
 /* Animations */
