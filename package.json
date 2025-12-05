@@ -2,6 +2,7 @@
     "name": "www.onel0p3z.co",
     "description": "My personal site http://www.onel0p3z.co",
     "version": "1.0.0",
+    "type": "module",
     "author": "Juan Lopez <onel0p3z@gmail.com>",
     "bugs": {
         "url": "https://github.com/onel0p3z/www.onel0p3z.co/issues"
